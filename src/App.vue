@@ -57,7 +57,7 @@ const birdieOptions = ref({
     text: 'Top 5 most birdies',
     textStyle: {
       color: '#fff',
-      fontSize: '14px',
+      fontSize: '18px',
     },
     left: 'center'
   },
@@ -103,7 +103,7 @@ const gameOptions = ref({
     text: 'Top 5 most rounds',
     textStyle: {
       color: '#fff',
-      fontSize: '14px',
+      fontSize: '18px',
     },
     left: 'center'
   },
@@ -149,7 +149,7 @@ const ratioOptions = ref({
     text: 'Top 5 birdies per round',
     textStyle: {
       color: '#fff',
-      fontSize: '14px',
+      fontSize: '18px',
     },
     left: 'center'
   },
