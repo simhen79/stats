@@ -8,6 +8,20 @@
     </div>
     <div class="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4 p-4">
       <div class="place-items-center lg:mt-30">
+        <div class="flex flex-col gap-10 place-items-center text-white font-bold mb-10">
+          <div class="flex flex-col gap-0 place-items-center">
+            <b class="text-6xl">{{ totals.totalBirdies }}</b>
+            <p>Total Birdies</p>
+          </div>
+          <div class="flex flex-col gap-0 place-items-center">
+            <b class="text-6xl">{{ totals.totalGames }}</b>
+            <p>Total Games</p>
+          </div>
+          <div class="flex flex-col gap-0 place-items-center">
+            <b class="text-6xl">{{ totals.avgRatio }}</b>
+            <p>Avg birdies per round</p>
+          </div>
+        </div>
         <v-chart :option="birdieOptions" autoresize  class="pie-chart" />
         <v-chart :option="gameOptions" autoresize class="pie-chart" />
         <v-chart :option="ratioOptions" autoresize class="pie-chart" />
@@ -44,13 +58,7 @@ onMounted(() => {
   getStats();
 });
 
-const { stats, date, topBirdies, topGames, topRatio, getStats } = useStats();
-
-const updatedDate = ref('');
-
-watch(date, () => {
-   //barOptions.value.title.text = date.value;
-});
+const { stats, date, topBirdies, topGames, topRatio, totals , getStats } = useStats();
 
 const birdieOptions = ref({
   title: {
